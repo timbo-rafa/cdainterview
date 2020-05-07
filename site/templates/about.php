@@ -13,49 +13,32 @@
 <?php snippet('header') ?>
 
 <main>
-    <?php snippet('intro') ?>
+  <div class="text">
 
-  <div class="layout">
+  <h3>
+    <?= $page->company() ?>
+  </h3>
 
-    <aside>
-      <section>
-        <h2>Address</h2>
-        <div class="text">
-          <?= $page->address()->kt() ?>
-        </div>
-      </section>
+  <strong>
+    Toll Free:
+  </strong>
+  <?= html::tel($page->phone()) ?>
+  <br/>
+  <strong>
+    Email:
+  </strong>
+  <?= html::email($page->sendmailto()) ?>
 
-      <section>
-        <h2>Email</h2>
-        <div class="text">
-          <?= html::email($page->email()) ?>
-        </div>
-      </section>
-
-      <section>
-        <h2>Phone</h2>
-        <div class="text">
-          <?= html::tel($page->phone()) ?>
-        </div>
-      </section>
-
-      <section>
-        <h2>On the web</h2>
-        <div class="text">
-          <ul>
-            <?php foreach ($page->social()->toStructure() as $social): ?>
-            <li><?= html::a($social->url(), $social->platform()) ?></li>
-            <?php endforeach ?>
-          </ul>
-        </div>
-      </section>
-
-    </aside>
-
-    <div class="text">
-      <?= $page->text()->kt() ?>
-    </div>
   </div>
+
+  <br>
+
+  <?php snippet('contact') ?>
+
+  <div class="text">
+    <?= $page->text()->kt() ?>
+  </div>
+
 </main>
 
 <?php snippet('footer') ?>

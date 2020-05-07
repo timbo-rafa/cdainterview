@@ -1,3 +1,5 @@
+<?php if (!$kirby->user() && !$page->is('login')) go('/login') ?>
+
 <?php
 /**
  * Snippets are a great way to store code snippets for reuse or to keep your templates clean.
@@ -20,6 +22,8 @@
   <!-- Stylesheets can be included using the `css()` helper. Kirby also provides the `js()` helper to include script file. 
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
   <?= css(['assets/css/index.css', '@auto']) ?>
+  
+  <script src="https://kit.fontawesome.com/69f0f4c20b.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -27,7 +31,7 @@
   <div class="page">
     <header class="header">
       <!-- In this link we call `$site->url()` to create a link back to the homepage -->
-      <a class="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
+      <a class="logo" href="<?= $site->url() ?>"><?= $site->image('bemo-logo2.png')->resize(null, 100) ?></a>
 
       <nav id="menu" class="menu">
         <?php 
@@ -35,8 +39,11 @@
         // We do not want to display links to unlisted `error`, `home`, or `sandbox` pages
         // More about page status: https://getkirby.com/docs/reference/panel/blueprints/page#statuses
         foreach ($site->children()->listed() as $item): ?>
-        <?= $item->title()->link() ?>
+          <?= $item->title()->link() ?>
         <?php endforeach ?>
+        <?php if ($user = $kirby->user()): ?>
+          <a href="<?= url('logout') ?>">Logout</a>
+        <?php endif ?>
       </nav>
     </header>
 

@@ -1,5 +1,5 @@
 # Each page blueprint must have a title, the title may be different from the file name
-title: About us
+title: Main
 
 # Each page can have an icon that is shown in page listings when no preview image is available.
 icon: ☎️
@@ -21,38 +21,8 @@ options:
 # Columns are optional but help structure the form layout
 # More about columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
 columns:
-  - width: 1/2
-    fields:
+  - fields:
       text:
         label: Text
         type: textarea
         size: huge
-
-  - width: 1/2
-    # Kirby has many different field types, from simple text fields to the more complex structure field that contains subfields
-    # All available field types: https://getkirby.com/docs/reference/panel/fields
-    fields:
-      image:
-        type: files
-        multiple: false
-      # address:
-      #   label: Address
-      #   type: textarea
-      sendmailto:
-        label: Email
-        type: email
-      phone:
-        label: Phone
-        type: tel
-      # social:
-      #   label: On the web
-      #   type: structure
-      #   fields:
-      #     platform:
-      #       label: Platform
-      #       type: text
-      #       width: 1/2
-      #     url:
-      #       label: URL
-      #       type: url
-      #       width: 1/2

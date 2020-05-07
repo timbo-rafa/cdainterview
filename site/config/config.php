@@ -7,6 +7,31 @@
  * This setting must be set to false in production.
  * All config options: https://getkirby.com/docs/reference/system/options
  */
+
 return [
     'debug' => true,
+    'routes' => [
+        [
+            'pattern' => 'logout',
+            'action'  => function() {
+                
+                if ($user = kirby()->user()) {
+                    $user->logout();
+                }
+
+                go('login');
+            }
+        ]
+    ]
+    // 'email' => [
+    //     'transport' => [
+    //       'type' => 'smtp',
+    //       'host' => 'smtp.gmail.com',
+    //       'port' => 587,
+    //       'security' => true,
+    //       'auth' => true,
+    //       'username' => 'timbo.software+kirby.cdainterview@gmail.com',
+    //       'password' => 'tdtihvichqjhzdsr', #getenv('GMAIL_SMTP_PASSWORD'),
+    //     ]
+    // ]
 ];
