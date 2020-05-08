@@ -23,6 +23,9 @@ options:
 # More about columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
 columns:
   - fields:
+      noindex:
+        label: No-Index
+        type: toggle
       text:
         label: Text
         type: textarea

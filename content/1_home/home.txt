@@ -2,6 +2,10 @@ Title: Home
 
 ----
 
+Noindex: false
+
+----
+
 Text:
 
 (image: cda-interview-guide.jpg)

@@ -54,6 +54,11 @@
   /></noscript>
   <!-- End Facebook Pixel Code -->
 
+  <!-- No-Index -->
+  <?php if ($page->noindex()->toBool()): ?>
+    <meta name="robots" content="noindex,nofollow">
+  <?php endif ?>
+
 </head>
 <body>
 
