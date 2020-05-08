@@ -7,16 +7,16 @@
 <?php endif ?>
 
 <form method="post" action="<?= $page->url() ?>">
-  <div>
+  <div class="field">
     <label for="email"><?= $page->username()->html() ?></label>
-    <input type="email" id="email" name="email" value="<?= esc(get('email')) ?>">
+    <input class="form-control" type="email" id="email" name="email" value="<?= esc(get('email')) ?>">
   </div>
-  <div>
+  <div class="field">
     <label for="password"><?= $page->password()->html() ?></label>
-    <input type="password" id="password" name="password" value="<?= esc(get('password')) ?>">
+    <input class="form-control" type="password" id="password" name="password" value="<?= esc(get('password')) ?>">
   </div>
   <div>
-    <input type="submit" name="login" value="<?= $page->button()->html() ?>">
+    <input class="btn btn-primary" type="submit" name="login" value="<?= $page->button()->html() ?>">
   </div>
 </form>
 
