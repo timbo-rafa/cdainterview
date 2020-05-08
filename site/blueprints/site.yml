@@ -19,9 +19,8 @@ columns:
         type: pages
         create: default
         templates:
-          - main
+          - home
           - about
-          #- home
           - default
   - fields:
       pixel:
