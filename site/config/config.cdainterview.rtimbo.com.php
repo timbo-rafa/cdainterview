@@ -28,7 +28,8 @@ return [
 			'auth' => true,
 			'username' => getenv('MAILGUN_SMTP_LOGIN'),
 			'password' => getenv('MAILGUN_SMTP_PASSWORD'),
-    ],
+        ]
+    ]
     // Gmail SMTP
     // 'email' => [
     //     'transport' => [
