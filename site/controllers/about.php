@@ -38,7 +38,7 @@ return function($kirby, $pages, $page) {
             try {
                 $success = $kirby->email([
                     'template' => 'email',
-                    'from'     => esc($page->sendmailto()),
+                    'from'     => esc(getenv('MAILGUN_SMTP_LOGIN')),
                     'replyTo'  => $data['email'],
                     'to'       => esc($page->sendmailto()),
                     'subject'  => esc($data['name']) . ' sent you a message from your contact form',
