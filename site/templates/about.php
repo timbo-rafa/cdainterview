@@ -41,6 +41,7 @@
 
   <?php snippet('contact') ?>
 
+  <br>
   <div class="text">
     <?= $page->text()->kt() ?>
   </div>

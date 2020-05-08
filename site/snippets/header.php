@@ -44,6 +44,9 @@
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/69f0f4c20b.js" crossorigin="anonymous"></script>
 
+  <!-- Bootstrap: compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
   <!-- Facebook Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)

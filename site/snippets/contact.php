@@ -11,29 +11,29 @@
             <label for="website">Website <abbr title="required">*</abbr></label>
             <input type="website" id="website" name="website">
         </div>
-        <div class="field">
+        <div class="field form-group">
             <label for="name">
                 Name <abbr title="required">*</abbr>
             </label>
-            <input type="text" id="name" name="name" value="<?= $data['name'] ?? '' ?>" required>
+            <input class="form-control" type="text" id="name" name="name" value="<?= $data['name'] ?? '' ?>" required>
             <?= isset($alert['name']) ? '<span class="alert error">' . html($alert['name']) . '</span>' : '' ?>
         </div>
-        <div class="field">
+        <div class="field form-group">
             <label for="email">
                 Email <abbr title="required">*</abbr>
             </label>
-            <input type="email" id="email" name="email" value="<?= $data['email'] ?? '' ?>" required>
+            <input class="form-control" type="email" id="email" name="email" value="<?= $data['email'] ?? '' ?>" required>
             <?= isset($alert['email']) ? '<span class="alert error">' . html($alert['email']) . '</span>' : '' ?>
         </div>
-        <div class="field">
+        <div class="field form-group">
             <label for="text">
                 Text <abbr title="required">*</abbr>
             </label>
-            <textarea id="text" name="text" required>
+            <textarea class="form-control" id="text" name="text" required>
                 <?= $data['text']?? '' ?>
             </textarea>
             <?= isset($alert['text']) ? '<span class="alert error">' . html($alert['text']) . '</span>' : '' ?>
         </div>
-        <input type="submit" name="submit" value="Submit">
+        <input class="btn btn-primary" type="submit" name="submit" value="Submit">
     </form>
 <?php endif ?>
