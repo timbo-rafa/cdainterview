@@ -8,7 +8,7 @@ title: Site
 
 # The layout of this form has two columns:
 columns:
-  - width: 1/2
+  - width: 1
     sections:
       # The `pages` pages section shows other main pages of the site
       # Using the `templates` option, we limit which types of pages are shown
@@ -23,3 +23,10 @@ columns:
           - about
           #- home
           - default
+  - fields:
+      pixel:
+        label: Facebook Pixel
+        type: text
+      googletag:
+        label: Google Analytics tag
+        type: text

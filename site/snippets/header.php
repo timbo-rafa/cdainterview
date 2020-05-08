@@ -12,6 +12,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51625516-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '<?= esc($site->googletag()) ?>');
+  </script>
+  <!-- End of Global site tag -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -23,6 +33,7 @@
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
   <?= css(['assets/css/index.css', '@auto']) ?>
   
+  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/69f0f4c20b.js" crossorigin="anonymous"></script>
 
   <!-- Facebook Pixel Code -->
@@ -35,13 +46,14 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '567862500815676');
+    fbq('init', '<?= $site->pixel() ?>');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=567862500815676&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Facebook Pixel Code -->
+
 </head>
 <body>
 
