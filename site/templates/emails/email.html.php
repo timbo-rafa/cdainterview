@@ -1,4 +1,4 @@
-Hello Company,
+Hello BeMo Consulting,
 
 <p><?= $text ?></p>
 
