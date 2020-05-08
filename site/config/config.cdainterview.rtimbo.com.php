@@ -23,7 +23,7 @@ return [
 		'transport' => [
 			'type' => 'smtp',
 			'port' => getenv('MAILGUN_SMTP_PORT'),
-			'security' => 'tls',
+			'security' => 'ssl',
 			'host' => getenv('MAILGUN_SMTP_SERVER'), #'smtp.mailgun.org',
 			'auth' => true,
 			'username' => getenv('MAILGUN_SMTP_LOGIN'),
