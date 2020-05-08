@@ -18,6 +18,18 @@ return [
     'panel' => [
         'install' => true
     ],
+    // MailGun
+    'email' => [
+		'transport' => [
+			'type' => 'smtp',
+			'port' => getenv('MAILGUN_SMTP_PORT'),
+			'security' => 'tls',
+			'host' => getenv('MAILGUN_SMTP_SERVER'), #'smtp.mailgun.org',
+			'auth' => true,
+			'username' => getenv('MAILGUN_SMTP_LOGIN'),
+			'password' => getenv('MAILGUN_SMTP_PASSWORD'),
+    ],
+    // Gmail SMTP
     // 'email' => [
     //     'transport' => [
     //       'type' => 'smtp',
