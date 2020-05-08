@@ -32,6 +32,12 @@ columns:
     # Kirby has many different field types, from simple text fields to the more complex structure field that contains subfields
     # All available field types: https://getkirby.com/docs/reference/panel/fields
     fields:
+      metatitle:
+        label: Meta Title
+        type: text
+      metadescription:
+        label: Meta Description
+        type: text
       noindex:
         label: No-Index
         type: toggle

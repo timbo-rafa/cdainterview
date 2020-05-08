@@ -2,7 +2,15 @@ Title: Home
 
 ----
 
-Noindex: false
+Metatitle: cda interview
+
+----
+
+Metadescription: cda interview preparation with bemo academic consulting for school and students
+
+----
+
+Noindex: true
 
 ----
 

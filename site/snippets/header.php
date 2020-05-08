@@ -27,7 +27,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <!-- The title tag we show the title of our site and the title of the current page -->
-  <title><?= $site->title() ?> | <?= $page->title() ?></title>
+  <title><?= $page->metatitle() ?> | <?= $page->title() ?> | <?= $site->title() ?> </title>
+  <meta name="description" content="<?= $page->metadescription() ?>">
+
+  <!-- No-Index -->
+  <?php if ($page->noindex()->toBool()): ?>
+    <meta name="robots" content="noindex,nofollow">
+  <?php endif ?>
+
+  <!-- Meta -->
 
   <!-- Stylesheets can be included using the `css()` helper. Kirby also provides the `js()` helper to include script file. 
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
@@ -53,11 +61,6 @@
     src="https://www.facebook.com/tr?id=567862500815676&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Facebook Pixel Code -->
-
-  <!-- No-Index -->
-  <?php if ($page->noindex()->toBool()): ?>
-    <meta name="robots" content="noindex,nofollow">
-  <?php endif ?>
 
 </head>
 <body>
