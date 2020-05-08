@@ -13,6 +13,12 @@
 <?php snippet('header') ?>
 
 <main>
+  <figure>
+    <?php if ($img = $page->image()): ?>
+      <?= $img ?>
+    <?php endif ?>
+  </figure>
+
   <div class="text">
 
   <h3>
